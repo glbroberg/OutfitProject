@@ -1,0 +1,97 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background-color:rgb(190, 183, 229);
+    
+
+    /*background-image: url('../Images/closetBG.jpg');*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+   
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.jumboFormat{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.lowerBody{
+     
+}
+
+/*  New Header  */
+.newHeader{
+    display:block;
+    margin-left:13%;
+    margin-top:10px;
+    
+}
+
+.fancyFont{
+    font-family: 'Dancing Script', cursive;
+    float:right;
+    font-size:40px;
+}
+
+
+/*  Nav Bar  */
+.blackText {
+    color:black;
+}
+
+.blackText a{
+    color:black;
+}
+
+button.navbar-toggle {
+    border: 1px solid black;
+}
+
+span.glyphicon {
+    color: black;
+}
+
+.table img{
+    width:100px;
+}
+
+/*  Left Stuff  */
+.leftStuff{
+    position:absolute;
+    left:10%;
+}
+
+/* Carousel Section*/
+.carousel-indicators li{   
+    border: 1px solid rgb(71,78,93);    
+}
+
+.carousel-indicators .active{
+    background-color: rgb(71,78,93);
+    border: 2px solid rgb(71,78,93);    
+}
+
+.carousel-inner{
+    padding-bottom:70px;      
+}
+
+.item2 {
+    text-align:center;
+}
