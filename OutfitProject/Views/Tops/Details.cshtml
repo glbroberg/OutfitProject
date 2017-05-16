@@ -3,64 +3,40 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+<hr />
 
 <div>
     <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TopName)
-        </dt>
+    
+    <div class="panel panelForm">
+        <div class="container-fluid">
+            <div class="row">
 
-        <dd>
-            @Html.DisplayFor(model => model.TopName)
-        </dd>
+                @*  Details Section  *@
+                <div class="col-md-6 detailText">
+                    <h2>@Html.DisplayFor(model => model.TopName)</h2>
+                    <h4>
+                        @Html.DisplayFor(model => model.TopColor)
+                        @Html.DisplayFor(model => model.TopType)
+                    </h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </dt>
+                    <p>
+                        Season: @Html.DisplayFor(model => model.TopSeason) <br />
+                        Occasion: @Html.DisplayFor(model => model.TopOccasion)
+                    </p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }, new { role = "button", @class = "greyButton" })
+                        @Html.ActionLink("Back to List", "Index", new { id = Model.TopID }, new { role = "button", @class = "greyButton" })
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.TopID }, new { role = "button", @class = "greyButton" })
+                    </p>
+                </div>
 
-        <dd>
-            <img src="@Html.DisplayFor(model => model.TopPhoto)"/>
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopOccasion)
-        </dd>
-
-    </dl>
+                @*  Image Section  *@
+                <div class="col-md-6 detailImg">
+                    <img src="@Html.DisplayFor(model => model.TopPhoto)" />
+                </div>
+            </div>
+        </div>
+    </div>
+  
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

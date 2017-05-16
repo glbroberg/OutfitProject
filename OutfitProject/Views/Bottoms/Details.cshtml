@@ -3,64 +3,39 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
+<hr />
 
 <div>
     <h4>Bottom</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BottomName)
-        </dd>
+    <div class="panel panelForm">
+        <div class="container-fluid">
+            <div class="row">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </dt>
+                @*  Details Section  *@
+                <div class="col-md-6 detailText">
+                    <h2>@Html.DisplayFor(model => model.BottomName)</h2>
+                    <h4>
+                        @Html.DisplayFor(model => model.BottomColor)
+                        @Html.DisplayFor(model => model.BottomType)
+                    </h4>
 
-        <dd>
-            <img src="@Html.DisplayFor(model => model.BottomPhoto)"/>
-        </dd>
+                    <p>
+                        Season: @Html.DisplayFor(model => model.BottomSeason) <br />
+                        Occasion: @Html.DisplayFor(model => model.BottomOccasion)
+                    </p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }, new { role = "button", @class = "greyButton" })
+                        @Html.ActionLink("Back to List", "Index", new { id = Model.BottomID }, new { role = "button", @class = "greyButton" })
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.BottomID }, new { role = "button", @class = "greyButton" })
+                    </p>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomSeason)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomSeason)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomOccasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomOccasion)
-        </dd>
-
-    </dl>
+                @*  Image Section  *@
+                <div class="col-md-6 detailImg">
+                    <img src="@Html.DisplayFor(model => model.BottomPhoto)" />
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BottomID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -18,6 +18,17 @@ namespace OutfitProject.Controllers
         // GET: Shoes
         public ActionResult Index()
         {
+            
+
+            ViewBag.name = "shoeNumber";
+            List<Sho> shoeList = db.Shoes.ToList();
+                                          
+            int shoeNumber = 0;
+            foreach (Sho s in shoeList)
+            {
+                shoeNumber++;
+            }
+            ViewBag.ShoeTotal = shoeNumber;
             return View(db.Shoes.ToList());
         }
 
@@ -34,10 +45,7 @@ namespace OutfitProject.Controllers
                 return HttpNotFound();
             }
             return View(sho);
-            if  (sho != null)
-            {
-
-            }
+       
         }
 
         // GET: Shoes/Create

@@ -5,72 +5,30 @@
 }
 
 <h2>Shoes</h2>
-<p>Current number of shoes: </p>
+<p>Current number of shoes: @ViewBag.ShoeTotal</p>
 
 <p>
-    @Html.ActionLink("Would you like to add another pair of shoes?", "Create")
+    @Html.ActionLink("Would you like to add another pair of shoes?", "Create", new { role = "button", @class = "greyButton" })
 </p>
 
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    <h4>@Html.DisplayFor(modelItem => item.ShoeName)</h4>
+                    <div class="thumbnail thumbBorder">
+                        <a href="@Url.Action( "Details","Shoes",new { id=item.ShoeID } )">
+                            <img class="indexForm" src="@Html.DisplayFor(modelItem => item.ShoePhoto)">
+                        </a>
+                    </div>
+                </div>
+                
+            }
+
+        </div>
+    </div>
+</div>
 
 
-
-
-
-
-
-
-
-
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoePhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeOccasion)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeName)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.ShoePhoto)"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeOccasion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoeID })
-        </td>
-    </tr>
-}
-
-</table>

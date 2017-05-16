@@ -3,61 +3,30 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<hr />
+<h2>Tops</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Would you like to add another Top?", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TopName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopName)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.TopPhoto)"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopOccasion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
-        </td>
-    </tr>
-}
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    <h4>@Html.DisplayFor(modelItem => item.TopName)</h4>
+                    <div class="thumbnail thumbBorder">
+                        <a href="@Url.Action( "Details","Tops",new { id=item.TopID } )">
+                            <img class="indexForm" src="@Html.DisplayFor(modelItem => item.TopPhoto)">
+                        </a>
+                    </div>
+                </div>               
+            }
 
-</table>
+        </div>
+    </div>
+</div>
+
+

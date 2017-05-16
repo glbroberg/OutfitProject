@@ -17,6 +17,15 @@ namespace OutfitProject.Controllers
         // GET: Accessories
         public ActionResult Index()
         {
+            ViewBag.name = "accessNumber";
+            List<Accessory> accessList = db.Accessories.ToList();
+
+            int accessNumber = 0;
+            foreach (Accessory s in accessList)
+            {
+                accessNumber++;
+            }
+            ViewBag.AccessTotal = accessNumber;
             return View(db.Accessories.ToList());
         }
 

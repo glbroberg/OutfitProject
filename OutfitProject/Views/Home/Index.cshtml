@@ -1,54 +1,13 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-    <hr />
-    <div class="leftStuff">
-        <h3><a class="pinterest share-bar__item-link bn-clickable" 
-               data-pin-custom="true" href="#" target="_blank" 
-               data-beacon-click-disabled="true"></a></h3>
-    </div>
 }
+<hr />
 <div class="lowerBody">
     <div class="jumbotron jumboFormat">
-        <h1>Closet WebApp</h1>
+        <h2>Top Stories</h2>
 
-
-
-        <div class="row">
-            <div class="col-md-6">
-                <h1>@Html.ActionLink("Outfits", "Index", "Outfits")</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
-                <h3>@Html.ActionLink("Tops", "Index", "Tops")</h3>
-            </div>
-
-            <div class="col-md-3">
-                <h3>@Html.ActionLink("Bottoms", "Index", "Bottoms")</h3>
-            </div>
-
-            <div class="col-md-3">
-                <h3>@Html.ActionLink("Shoes", "Index", "Shoes")</h3>
-            </div>
-
-            <div class="col-md-3">
-                <h3>@Html.ActionLink("Accessories", "Index", "Accessories")</h3>
-            </div>
-        </div>
-        <div class="jumbotron">
-            <h2>ksdfhlkdshf</h2>
-            <p>
-                skdfsdlkfhsdlfkhsdlfhsdkjfhsdkflhdsfkldshflksdhflksdjflksdjfdsfsdfsdfsdfsdf
-                sdfsdfsdasdgsdkjghsalkgjsklgjslkgsdlkghsdklglskgnlkdsglksgjljilgnsdlnvlvnlivr
-                sdljsdalifsifjjsifhsdlkfhsdlkfsdlfh sdil ghsdgh sdil gsld jgsdl;gfsldfj lsdkg
-
-            </p>
-            
-
-            <header>
-                <h2>Top Rated Stories</h2>
-            </header>
+        @*  THumbnail that contains a carousel  *@
+        <div class="thumbnail">
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -56,22 +15,24 @@
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>                
+
+                </ol>
 
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <div class="item item2 active">
-                        <h3><em>"I love it!  I love it! I love it!"</em></h3>
-                        <h4>-Jen Jensen, Generic excitable tourist</h4>
+                <div class="carousel-inner ">
+                    <div class="item active centerText">
+                        <img class="img-responsive carouselImage" src="~/Images/hangerCloset.jpg" />
+                        <h4>Clothes, yadda yadda</h4>
                     </div>
 
-                    <div class="item item2">
-                        <img src="~/Images/closetBG.jpg" />
+                    <div class="item centerText ">
+                        <img class="img-responsive carouselImage" src="~/Images/folded-business-shirts-17207761.jpg" />
+                        <h4>Colors that match and stuff</h4>
                     </div>
 
-                    <div class="item item2">
-                        <h3><em>"It was nice, but I know this guy..."</em></h3>
-                        <h4>-Johnie JackWarner, traditional one-uper</h4>
+                    <div class="item centerText">
+                        <img class="img-responsive carouselImage" src="~/Images/shoesCuffBelt.jpg" />
+                        <h4>Hang up your clothes, slob</h4>
                     </div>
                 </div>
 
@@ -86,7 +47,44 @@
                 </a>
             </div>
         </div>
+
+        <div class="jumbotron jumbo2">
+            <h1>Front Story Title</h1>
+            <h4>
+                Date Stuff<br />
+                Author Stuff
+            </h4>
+            <h2>Mini Title</h2>
+            <p>
+                Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon 
+                amaranth tatsoi tomatillo melon azuki bean garlic.  Gumbo beet greens corn soko endive 
+                gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion 
+                okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.  Turnip greens 
+                yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado 
+                daikon napa cabbage asparagus winter purslane kale. <br/>
+                Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel 
+                kombu maize bamboo shoot green bean swiss chard 
+                seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss 
+                chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean 
+                chickweed potato bell pepper artichoke.<br />
+                    Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts 
+                black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut 
+                eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce 
+                parsley jÃ­cama salsify. <br/>
+                Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel
+                kombu maize bamboo shoot green bean swiss chard
+                seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss
+                chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean
+                chickweed potato bell pepper artichoke.<br />
+                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts
+                black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut
+                eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce
+                parsley jÃ­cama salsify. 
+
+            </p>
+
         </div>
     </div>
 </div>
+
 

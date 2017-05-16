@@ -3,61 +3,30 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
+<hr />
+<h2>Bottoms</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Would you like to add another Bottom?", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomOccasion)
-        </th>
-        <th></th>
-    </tr>
+<div class="jumbotron">
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    <h4>@Html.DisplayFor(modelItem => item.BottomName)</h4>
+                    <div class="thumbnail thumbBorder">
+                        <a href="@Url.Action( "Details","Bottoms",new { id=item.BottomID } )">
+                            <img class="indexForm" src="@Html.DisplayFor(modelItem => item.BottomPhoto)">
+                        </a>
+                    </div>
+                </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomName)
-        </td>
-        <td>
-            <img src="@Html.DisplayFor(modelItem => item.BottomPhoto)"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomOccasion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BottomID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BottomID })
-        </td>
-    </tr>
-}
+            }
 
-</table>
+        </div>
+    </div>
+</div>
+
+    

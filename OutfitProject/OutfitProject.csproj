@@ -181,11 +181,15 @@
     <Content Include="Images\closet.jpg" />
     <Content Include="Images\closet.png" />
     <Content Include="Images\closetBG.jpg" />
+    <Content Include="Images\closetStand.jpg" />
     <Content Include="Images\dressPants.jpg" />
     <Content Include="Images\eastlandSherman.jpg" />
+    <Content Include="Images\folded-business-shirts-17207761.jpg" />
+    <Content Include="Images\hangerCloset.jpg" />
     <Content Include="Images\jeans.jpg" />
     <Content Include="Images\linen.jpg" />
     <Content Include="Images\long-black-gown_318-43658.jpg" />
+    <Content Include="Images\shoesCuffBelt.jpg" />
     <Content Include="Images\skora.jpg" />
     <Content Include="Images\suit-and-tie-outfit_318-42494.jpg" />
     <Content Include="Images\tedBaker.jpg" />
