@@ -17,6 +17,15 @@ namespace OutfitProject.Controllers
         // GET: Tops
         public ActionResult Index()
         {
+            ViewBag.name = "topNumber";
+            List<Top> topList = db.Tops.ToList();
+
+            int topNumber = 0;
+            foreach (Top s in topList)
+            {
+                topNumber++;
+            }
+            ViewBag.TopsTotal = topNumber;
             return View(db.Tops.ToList());
         }
 
